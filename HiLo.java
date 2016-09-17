@@ -8,7 +8,6 @@ public class HiLo {
 		int target,
 			guess,
 			attempts;
-		String playAgain = "";
 		Scanner in = new Scanner(System.in);
 		Random rand = new Random();
 		while(running){
@@ -36,8 +35,7 @@ public class HiLo {
 				}
 			}
 			System.out.print("Do you want to play again (Y/N)? ");
-			playAgain = in.next();
-			if(playAgain.equals("N") || playAgain.equals("n")){
+			if(in.next().equalsIgnoreCase("N")){
 				running = false;
 			}
 		}
